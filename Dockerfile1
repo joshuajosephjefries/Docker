@@ -1,3 +1,5 @@
+# To build, run "docker build -t gitimage ."
+
 ARG VERSION=latest
 FROM amazonlinux:${VERSION}
 ENV container docker
