@@ -1,4 +1,7 @@
 # To build, run "docker build -t ansibleimage ."
+# To make/run/attach/execute a container: "docker run -it ansibleimage /bin/bash"
+# To exit the container: Ctrl P Q
+# Do not force exit the container as it goes into the exited mode.
 
 ARG VERSION=latest
 FROM amazonlinux:${VERSION}
