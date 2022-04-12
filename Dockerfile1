@@ -1,3 +1,19 @@
+ARG VERSION=latest
+
+FROM amazonlinux:${VERSION}
+
+ENV container docker
+
+MAINTAINER bjosephjefries@gmail.com
+
+RUN yum install -y git
+
+LABEL description="Git VCS Installation"
+
+LABEL createdBy=joshuajosephjefries"
+
+CMD tail -f /dev/null 
+
 # Dockerfile to create a git image
 
 # To build an image: "docker build -t gitimage ."
@@ -6,12 +22,3 @@
 # Do not force exit the container as it goes into the exited mode. 
 # Everytime a line/instruction is run, docker discards intermediate container. 
 # Therefore, tail -f /dev/null does not make the container go into exited mode.
-
-ARG VERSION=latest
-FROM amazonlinux:${VERSION}
-ENV container docker
-# MAINTAINER bjosephjefries@gmail.com -> Depreciated
-RUN yum install -y git
-LABEL description="Git VCS Installation"
-LABEL createdBy=joshuajosephjefries"
-CMD tail -f /dev/null 
