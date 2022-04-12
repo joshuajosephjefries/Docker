@@ -8,10 +8,16 @@
 # Therefore, tail -f /dev/null does not make the container go into exited mode.
 
 ARG VERSION=latest
+
 FROM amazonlinux:${VERSION}
+
 ENV container docker
-# MAINTAINER bjosephjefries@gmail.com -> Depreciated
+
+MAINTAINER bjosephjefries@gmail.com -> Depreciated
+
 RUN yum install -y ansible
+
 LABEL description="Ansible Installation"
 LABEL createdBy="joshuajosephjefries" 
+
 CMD tail -f /dev/null
