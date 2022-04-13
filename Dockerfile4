@@ -1,0 +1,37 @@
+# Dockerfile to build an image that contains apache2 webserver and create a html file to display on website
+
+# To build an image: "docker build -t webserver ."
+# To make/run/attach/execute a container: "docker run -it --name webcontainer -p 8080:80 webserver /bin/bash"
+# Check the status of apache2: "systemctl status apache2.service" && "systemctl start apache2.service"
+# To exit the container: Ctrl P Q
+# Do not force exit the container as it goes into the exited mode. 
+# Everytime a line/instruction is run, docker discards intermediate container. 
+# Therefore, tail -f /dev/null does not make the container go into exited mode.
+
+# To access container on web: Private_IP_Address: Port number (8080)
+
+ARG BASE_VERSION=latest
+
+FROM ubuntu:${BASE_VERSION}
+
+RUN apt-get update -y
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get install -y apache2 && apt-get clean && apt-get install nano
+
+EXPOSE 80
+
+RUN apt-get install -y systemctl
+
+WORKDIR /var/www/html
+
+RUN echo "<p> Hello World! I am Joey. </p>" > index.html
+
+LABEL description="Apache Webserver that can access the index.html on web"
+
+LABEL createdBy="joshuajosephjefries"
+
+RUN systemctl start apache2.service
+
+CMD tail -f /dev/null
