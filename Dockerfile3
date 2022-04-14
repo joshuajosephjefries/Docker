@@ -1,23 +1,17 @@
-# Dockerfile to create a new volume using VOLUME instruction
-
-# To build an image: "docker build -t volumeimage ."
-# To make/run/attach/execute a container: "docker run -it volumeimage /bin/bash"
-# To exit the container: Ctrl P Q
-# Do not force exit the container as it goes into the exited mode. 
-# Everytime a line/instruction is run, docker discards intermediate container. 
-# Therefore, tail -f /dev/null does not make the container go into exited mode.
-
 ARG BASE_VERSION=latest
 
 FROM amazonlinux:${BASE_VERSION}${NO_PROXY}
 
 RUN mkdir /myvol
+
 RUN echo "Hello world! My name is Joey" > /myvol/greeting
+
 RUN yum install -y nano
 
 VOLUME /myvol
 
 LABEL description="Creating new volume"
+
 LABEL createdBy="joshuajosephjefries" 
 
 CMD tail -f /dev/null
