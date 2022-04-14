@@ -22,7 +22,8 @@
                Do not force exit the container as it goes into the exited mode.
                Everytime a line/instruction is run, docker discards intermediate container. 
                Therefore, tail -f /dev/null does not make the container go into exited mode.
-           </p>
+          </p>
+          <hr>
           <h2> Dockerfile 3 </h2>
           <p>
                Dockerfile to create a new volume using VOLUME instruction
@@ -33,6 +34,7 @@
                Everytime a line/instruction is run, docker discards intermediate container. 
                Therefore, tail -f /dev/null does not make the container go into exited mode.
           </p>
+          <hr>
           <h2> Dockerfile 4 </h2>
           <p>
                Dockerfile to build an image that contains apache2 webserver and create a html file to display on website
@@ -45,6 +47,7 @@
                Therefore, tail -f /dev/null does not make the container go into exited mode.
                To access container on web: Private_IP_Address: Port number (8080)
           </p>
+          <hr>
      </body>
 </html>
  
