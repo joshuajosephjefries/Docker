@@ -48,6 +48,15 @@
                <br> To access container on web: Private_IP_Address: Port number (8080)
           </p>
           <hr>
+          <h2> Dockerfile 5 </h2>
+          <p>  
+               Dockerfile to install jenkins along with jenkins CLI
+               <br> To build an image: "docker build -t myjenkins-blueocean:2.332.2-1 ."
+               <br> To make/run/attach/execute a container: "docker run --name jenkins-blueocean --rm --detach --network jenkins --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 --publish 8080:8080 --publish 50000:50000 --volume jenkins-data:/var/jenkins_home --volume jenkins-docker-certs:/certs/client:ro myjenkins-blueocean:2.332.2-1"
+               <br> To exit the container: Ctrl P Q
+               <br> Do not force exit the container as it goes into the exited mode. 
+          </p>
+          <hr>
      </body>
 </html>
  
