@@ -59,7 +59,7 @@
           <hr>
           <h2> How to create a docker inside docker </h2>
           <p>
-               <img width="638" alt="Docker_inside_docker" src="https://user-images.githubusercontent.com/79646955/165822648-9d5f592b-82ee-4739-a376-ce4bb10e827c.png">
+               <img width="638" alt="Docker_inside_docker" src="https://user-images.githubusercontent.com/79646955/165822648-9d5f592b-82ee-4739-a376-ce4bb10e827c.png" style="vertical-align:middle">
           </p>
           </hr>
      </body>
