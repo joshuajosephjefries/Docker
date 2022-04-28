@@ -52,11 +52,16 @@
           <p>  
                Dockerfile to install jenkins along with jenkins CLI
                <br> To build an image: "docker build -t myjenkins-blueocean:2.332.2-1 ."
-               <br> To make/run/attach/execute a container: "docker run --name jenkins-blueocean --rm --detach --network jenkins --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 --publish 8080:8080 --publish 50000:50000 --volume jenkins-data:/var/jenkins_home --volume jenkins-docker-certs:/certs/client:ro myjenkins-blueocean:2.332.2-1"
+               <br> To make/run/attach/execute a container: "docker run --name jenkins-blueocean --rm --detach --network jenkins --env DOCKER_HOST=tcp://docker:2376                  <br> --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 --publish 8080:8080 --publish 50000:50000 --volume jenkins-data:/var/jenkins_home                  <br> --volume jenkins-docker-certs:/certs/client:ro myjenkins-blueocean:2.332.2-1"
                <br> To exit the container: Ctrl P Q
                <br> Do not force exit the container as it goes into the exited mode. 
           </p>
           <hr>
+          <h2> How to create a docker inside docker </h2>
+          <p>
+               <img width="638" alt="Docker_inside_docker" src="https://user-images.githubusercontent.com/79646955/165822648-9d5f592b-82ee-4739-a376-ce4bb10e827c.png">
+          </p>
+          </hr>
      </body>
 </html>
  
