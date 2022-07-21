@@ -24,10 +24,4 @@ def hello():
     print('Hello World! I have been seen {} times.\n'.format(count))
     print("Hi. My name is Joseph Jefries and I am learning DevOps")
     print("createdBy = joshuajosephjefries")
-    
-class unprotectedForm(FlaskForm):
-    class Meta:
-        csrf = True # Compliance
-
-    name = TextField('name')
-    submit = SubmitField('submit')
+   
