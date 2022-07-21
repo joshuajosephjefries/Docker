@@ -3,6 +3,8 @@ import redis
 import flask 
 
 app = flask.Flask(__name__)
+csrf = CSRFProtect()
+csrf.init_app(app)
 cache = redis.Redis(host='redis', port=6379)
 
 def get_hit_count():
@@ -22,3 +24,10 @@ def hello():
     print('Hello World! I have been seen {} times.\n'.format(count))
     print("Hi. My name is Joseph Jefries and I am learning DevOps")
     print("createdBy = joshuajosephjefries")
+    
+class unprotectedForm(FlaskForm):
+    class Meta:
+        csrf = True # Compliance
+
+    name = TextField('name')
+    submit = SubmitField('submit')
