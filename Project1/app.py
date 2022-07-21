@@ -19,6 +19,6 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return 'Hello World! I have been seen {} times.\n'.format(count)
-    return "Hi. My name is Joseph Jefries and I am learning DevOps"
-    return "createdBy = joshuajosephjefries"
+    print('Hello World! I have been seen {} times.\n'.format(count))
+    print("Hi. My name is Joseph Jefries and I am learning DevOps")
+    print("createdBy = joshuajosephjefries")
